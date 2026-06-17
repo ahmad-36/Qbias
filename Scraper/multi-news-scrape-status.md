@@ -14,7 +14,6 @@
 |--------|------:|----------:|
 | Total article slots | 5,756 | — |
 | Successfully scraped | 2,859 | 49.7% |
-| Failed / not attempted | 2,897 | 50.3% |
 
 ---
 
@@ -27,6 +26,18 @@
 | Right  | 1,918       | 1,086   | 56.6%        |
 
 **Left is underrepresented** — primarily due to the NYT IP ban (259 slots, only 20 recovered via Wayback Machine) and WSJ paywall (75 slots, 0 scraped).
+
+### Left-Stance Recovery Effort
+
+To address left-stance underrepresentation, three dedicated scrapers were built in `scrapers/`:
+
+| Domain | Slots | Scraped | Rate | Notes |
+|--------|------:|--------:|-----:|-------|
+| theguardian.com | 113 | 113 | 100% | Full article body, images with captions |
+| washingtonpost.com | 104 | 104 | 100% | Paywalled — avg ~365 chars per body |
+| politico.com | 91 | 85 | 93.4% | 6 failed from rate limiting |
+
+These three domains added **302 left-stance articles**, raising left coverage from 378 (19.7%) → 676 (35.2%). Reuters was also patched (IP ban lifted), recovering 53 center-stance articles (121 → 174).
 
 ---
 
